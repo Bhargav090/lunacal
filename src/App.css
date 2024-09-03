@@ -1,38 +1,253 @@
-.App {
-  text-align: center;
+.App{
+  background: linear-gradient(to bottom, #373E44, #191B1F);
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.left, .right{
+  width: 50%;
 }
+/* left---- */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (max-width: 768px){
+  .left{
+    display: none;
+  }
+  .right{
+    width: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.left{
+  border: 1px solid #96BEE7;
+  border-radius: 27px;
+  margin: 3% 1% 4% 2%;
+  background-color: #616161;
+}
+
+/* right------------------- */
+
+.right{
   display: flex;
   flex-direction: column;
+  margin: 3% 2% 4% 2%;
+  gap: 4%;
+}
+/* top---------------- */
+.top, .bottom{
+  height: 50%;
+  background-color: #363C43;
+  border-radius: 19px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
+}
+.line {
+  width: 80%; 
+  height: 1%; 
+  border-radius: 20px;
+  background:linear-gradient(to bottom,#585656,#282828);
+  border: none;  
+  display: block; 
+  margin: 0 auto 0 auto;
+}
+
+.top ,.bottom{
+  position: relative; 
+  overflow: hidden;
+}
+/*  Navbar -----------*/
+.navbar {
+  position: relative; 
+  top: 10px; 
+  left: 40px; 
+  right: 10px;
+  background-color: black; 
+  padding: 6px 17px; 
+  border-radius: 20px; 
+  display: flex; 
+  justify-content: space-around; 
+  z-index: 1000; 
+  width: calc(100% - 60px);
+  white-space: nowrap;
+  
+  
+}
+
+.content {
+  height: calc(100% - 60px); 
+  overflow-y: auto; 
+  padding: 3% 3% 1% 7%;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #969696;
+}
+
+.nav-link,
+.active-link {
+  flex: 1; 
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-align: center; 
+  transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease; /* Smooth transition effect */
+}
+
+
+.active-link {
+  background-color: #28292F; 
+  color: white;
+  padding:2% 5%; 
+  box-shadow: 4px 4px 40px 13px rgba(0, 0, 0, 0.9);
+}
+
+.content::-webkit-scrollbar {
+  width: 5px; 
+  background-color: #373E44;
+  margin: 1%;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background-color: grey; 
+  border-radius: 10px;
+}
+
+.img1{
+  position:absolute ;
+  top: 15px;
+  left: 10px;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+.img2{
+  position:absolute ;
+  top: 105px;
+  left: 10px;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+/* bottom---------- */
+.navele {
+  position: absolute;
+  top: 20px;
+  display: flex;
+  left: 50px;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.btn1 {
+  padding: 2% 6%;
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  border-radius: 15px;
+  border: none;
+  align-self: flex-start;
+  position: relative;
+  right: 100px;
+  cursor: pointer;
+}
+@media screen and (max-width:1100px){
+  .btn1{
+    right: 60px;
+  }
+}
+@media screen and (max-width:768px) {
+  .btn1{
+    right: 120px;
+    padding: 2% 5%;
+  }
+}
+
+.arrow-buttons {
+  display: flex;
+  align-items: center; 
+  gap: 10px;
+}
+
+.btn-circle {
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: -2px 1px 1px  #3b3c41;
+}
+
+.btn-circle:hover {
+  background-color: #28292f;
+}
+.btn2 {
+  padding: 8px 16px;
+  background-color: #373E44;
   color: white;
+  font-weight: 500;
+  border-radius: 20px;
+  border: none;
+  white-space: nowrap; 
+  box-shadow: 1px 0px 5px white, 3px 3px 10px black;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.btn2:hover {
+  box-shadow: -1px -1px 7px white, 5px 5px 10px black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.content2 {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 8%;
+  height: calc(100% - 40px); 
+  overflow-y: auto; 
+  padding: 3% 4% 1% 6%;
+  box-sizing: border-box;
+}
+
+.display-image {
+  flex: 1;
+  margin: 10px 10px;
+}
+@media screen and (max-width:1110px){
+  .content2 {
+    margin-top: 10%;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media screen and (max-width:960px){
+  .content2 {
+    margin-top: 10%;
+  }
+  .navele {
+    justify-content: center;
+  }
+}
+@media screen and (max-width:890px){
+  .content2{
+    margin-top: 12%;
+    height: calc(100% - 70px); 
+  }
+  .nav-link{
+    font-size: 13px;
+  }
+  .active-link{
+    font-size: 13px;
+  }
+  .btn-circle{
+    width: 30px;
+    height: 30px;
   }
 }
