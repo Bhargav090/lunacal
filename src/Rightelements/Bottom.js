@@ -3,11 +3,12 @@ import img1 from "../assets/Vector.png";
 import img2 from "../assets/img2.png";
 import left from "../assets/left.png";
 import right from "../assets/right.png";
-import imgm1 from "../assets/imgm1.jpg";
-import imgm2 from "../assets/imgm2.jpg"
+import imgm1 from "../assets/imgm1.jpeg";
+import imgm2 from "../assets/imgm2.jpeg"
+import imgm3 from "../assets/imgm3.jpeg"
 
 export default function Bottom() {
-  const [images, setImages] = useState([imgm1, imgm2]); 
+  const [images, setImages] = useState([imgm1, imgm2,imgm3]); 
   const [startIndex, setStartIndex] = useState(0);
 
   const handleAddImage = (event) => {
