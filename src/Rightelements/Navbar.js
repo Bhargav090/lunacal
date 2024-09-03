@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <NavLink
-        to="/aboutme"
+        to="/"
         className={({ isActive }) => (isActive ? 'active-link' : 'nav-link')}
       >
         About Me
