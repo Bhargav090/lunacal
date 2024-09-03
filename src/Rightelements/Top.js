@@ -15,7 +15,7 @@ export default function Top() {
       <div className="content">
       <img src={img2} alt='question mark' className='img2'/>
         <Routes>
-          <Route path="/aboutme" element={<Aboutme />} />
+          <Route path="/" element={<Aboutme />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/recommended" element={<Recommended />} />
         </Routes>
